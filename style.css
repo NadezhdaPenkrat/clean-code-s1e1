@@ -144,7 +144,20 @@ ul {
   .task__delete-img:hover {
     transform: rotateZ(0);
   }
+ /* New Task */
+.task-section__title_new {
+    display: block;
+    margin: 0 0 20px;
+  }
   
+  .task_new {
+    display: flex;
+  }
+  
+  .task__input_new {
+    width: 318px;
+    display: inline-block;
+  } 
 
 /* Completed */
 ul#completed-tasks label {
