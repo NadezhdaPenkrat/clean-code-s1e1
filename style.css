@@ -58,7 +58,7 @@ ul {
     margin: 0 auto 0;
   }
   
-  .task-section__title {
+  .article-section__title {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -69,8 +69,8 @@ ul {
   }
   
 
-/* Task */
-.task {
+/* entity */
+.entity {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -80,29 +80,29 @@ ul {
     align-items: center;
   }
   
-  .task > * {
+  .entity > * {
     vertical-align: middle;
   }
   
-  .task__checkbox {
+  .entity__checkbox {
     margin: 0 10px;
   }
   
-  .task__label {
+  .entity__label {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
     width: 226px;
   }
   
-  .task__label,
-  .task__input {
+  .entity__label,
+  .entity__input {
     width: 56%;
     display: inline-block;
     flex-grow: 1;
   }
   
-  .task__input {
+  .entity__input {
     width: 226px;
     margin: 0;
     display: none;
@@ -117,11 +117,11 @@ ul {
     color: #888;
   }
   
-  .task__input:focus {
+  .entity__input:focus {
     color: #333;
   }
   
-  .task__button {
+  .entity__button {
     background: none;
     border: 0px;
     color: #888;
@@ -131,46 +131,46 @@ ul {
     cursor: pointer;
   }
   
-  .task__button:hover {
+  .entity__button:hover {
     color: #3a3a3a;
   }
   
-  .task__delete-img {
+  .entity__delete-img {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
   }
   
-  .task__delete-img:hover {
+  .entity__delete-img:hover {
     transform: rotateZ(0);
   }
- /* New Task */
-.task-section__title_new {
+ /* New entity */
+.article-section__title_new {
     display: block;
     margin: 0 0 20px;
   }
   
-  .task_new {
+  .entity_new {
     display: flex;
   }
   
-  .task__input_new {
+  .entity__input_new {
     width: 318px;
     display: inline-block;
   } 
 
 /* Completed */
-.task-list_completed .task__label {
+.entity-list_completed .entity__label {
     text-decoration: line-through;
     color: #888;
   }
 
-/* Edit Task */
-.task_edit-mode .task__input {
+/* Edit entity */
+.entity_edit-mode .entity__input {
   display: inline-block;
   width: 224px;
 }
 
-.task_edit-mode .task__label {
+.entity_edit-mode .entity__label {
   display: none;
 }

@@ -9,10 +9,10 @@
 // Event handling, user interaction is what starts the code execution.
 
 // Event handling, user interaction is what starts the code execution.
-const newTaskInput = document.querySelector(".task__input_new"); //Add a new task input
-const addButton = document.querySelector(".task__button_add");//Button 'Add'
-const todoList = document.querySelector(".task-list_todo");//list todo-tasks
-const completedTasksList = document.querySelector(".task-list_completed");//list completed-tasks
+const newTaskInput = document.querySelector(".entity__input_new"); //Add a new task input
+const addButton = document.querySelector(".entity__button_add");//Button 'Add'
+const todoList = document.querySelector(".entity-list_todo");//list todo-tasks
+const completedTasksList = document.querySelector(".entity-list_completed");//list completed-tasks
 
 function createNewElementWithClass(el, elClasses) {
     const element = document.createElement(el);
@@ -23,18 +23,18 @@ function createNewElementWithClass(el, elClasses) {
 //New task list item
 var createNewTaskElement=function(taskString){
 
-    const listItem = createNewElementWithClass("li", "task");//task
+    const listItem = createNewElementWithClass("li", "entity");//task
 
-    const checkBox = createNewElementWithClass("input", "task__checkbox");//checkbox
+    const checkBox = createNewElementWithClass("input", "entity__checkbox");//checkbox
     checkBox.type="checkbox";
-    const label = createNewElementWithClass("label", "task__label");//label
+    const label = createNewElementWithClass("label", "entity__label");//label
     label.innerText = taskString;
-    const editInput = createNewElementWithClass("input", "task__input");//input
+    const editInput = createNewElementWithClass("input", "entity__input");//input
     editInput.type="text";
-    const editButton = createNewElementWithClass("button", "task__button task__button_edit");//edit button
+    const editButton = createNewElementWithClass("button", "entity__button entity__button_edit");//edit button
     editButton.innerText="Edit";
-    const deleteButton = createNewElementWithClass("button", "task__button task__button_delete");//delete button
-    deleteButton.innerHTML = '<img class="task__delete-img" src="./remove.svg" alt="delete Icon">';
+    const deleteButton = createNewElementWithClass("button", "entity__button entity__button_delete");//delete button
+    deleteButton.innerHTML = '<img class="entity__delete-img" src="./remove.svg" alt="delete Icon">';
   
     listItem.append(checkBox, label, editInput, editButton,deleteButton);
     return listItem;
@@ -60,10 +60,10 @@ var editTask=function(){
   console.log("Change 'edit' to 'save'");
 
   const listItem = this.parentNode;
-  const editInput = listItem.querySelector('.task__input');
-  const label = listItem.querySelector(".task__label");
-  const editBtn = listItem.querySelector(".task__button_edit");
-  const containsClass = listItem.classList.contains("task_edit-mode");
+  const editInput = listItem.querySelector('.entity__input');
+  const label = listItem.querySelector(".entity__label");
+  const editBtn = listItem.querySelector(".entity__button_edit");
+  const containsClass = listItem.classList.contains("entity_edit-mode");
 
   //change label and button depending on task_edit-mode
   if (containsClass) {
@@ -74,8 +74,8 @@ var editTask=function(){
     editBtn.innerText = "Save";
   }
 
-  //toggle .task_edit-mode on the parent.
-  listItem.classList.toggle("task_edit-mode");
+  //toggle .entity_edit-mode on the parent.
+  listItem.classList.toggle("entity_edit-mode");
 };
 
 
@@ -105,9 +105,9 @@ const bindTaskEvents = function(taskListItem) {
   console.log("bind list item events");
 
   //select ListItems children and bind listeners to them
-  const checkBox = taskListItem.querySelector(".task__checkbox");
-  const editButton = taskListItem.querySelector(".task__button_edit");
-  const deleteButton = taskListItem.querySelector(".task__button_delete");
+  const checkBox = taskListItem.querySelector(".entity__checkbox");
+  const editButton = taskListItem.querySelector(".entity__button_edit");
+  const deleteButton = taskListItem.querySelector(".entity__button_delete");
 
   editButton.addEventListener("click", editTask);
   deleteButton.addEventListener("click", deleteTask);
