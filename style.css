@@ -29,6 +29,23 @@ ul {
   button {
     outline: none;
 }
+
+/* Header */
+.header {
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    text-align: right;
+  }
+  
+  .header__img {
+    width: 100%;
+  }
+  
+  .header__link {
+    font-family: fantasy, cursive;
+  }
+  
 @media (max-width:768px) {
 .aaa { text-align: center;
 }
