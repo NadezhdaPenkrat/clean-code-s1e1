@@ -11,3 +11,6 @@
     - Editing an item from the "COMPLETED" list
     - Setting an item to "Incomplete" status and moving it to the "TODO" list via checkbox
     - Animation on the delete button
+
+link to task
+https://NadezhdaPenkrat.github.io/clean-code-s1e1/
